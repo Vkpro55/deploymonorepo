@@ -19,4 +19,5 @@ jobs:
           ssh -i ~/.ssh/dev.pem ubuntu@54.242.252.5 << 'EOF'
           cd deploymonorepo
           ls
+          EOF
 
