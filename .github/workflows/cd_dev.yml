@@ -13,5 +13,6 @@ jobs:
         run: |
           cd ~
           mkdir .ssh
-          echo "Gello" > ~/.ssh/dev.pem
+          echo ${{secrets.SSH_SECRET_PRIVATE_KEY_DEV}} > ~/.ssh/dev.pem
           cat ~/.ssh/dev.pem
+
