@@ -12,5 +12,8 @@ jobs:
       - name: SSH into the dev server
         run: |
           cd ~
-          pwd
+          pwdmkdir .ssh
+          cd .ssh
+          touch dev.pem
+          cd..
           ls -al
