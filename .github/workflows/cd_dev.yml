@@ -12,7 +12,8 @@ jobs:
       - name: SSH into the dev server
         run: |
           cd ~
-          pwdmkdir .ssh
+          pwd
+          mkdir .ssh
           cd .ssh
           touch dev.pem
           cd..
