@@ -14,7 +14,4 @@ jobs:
           cd ~
           pwd
           mkdir .ssh
-          cd .ssh
-          touch dev.pem
-          cd..
           ls -al
