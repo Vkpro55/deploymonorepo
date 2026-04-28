@@ -13,4 +13,3 @@ jobs:
         run: |
           cd ~
           pwd
-          ls
