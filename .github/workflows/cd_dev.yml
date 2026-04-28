@@ -16,7 +16,7 @@ jobs:
           echo "${{secrets.SSH_SECRET_PRIVATE_KEY_DEV}}" > ~/.ssh/dev.pem
           ssh-keyscan -H ${{ secrets.SSH_DEV_HOST }} >> ~/.ssh/known_hosts
           chmod 400 ~/.ssh/dev.pem
-          ssh -i ~/.ssh/dev.pem ubuntu@54.242.252.5
+          ssh -i ~/.ssh/dev.pem ubuntu@54.242.252.5 << 'EOF'
           pwd
           ls -arl
 
