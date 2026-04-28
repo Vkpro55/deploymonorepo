@@ -14,6 +14,7 @@ jobs:
           cd ~
           mkdir .ssh
           echo "${{secrets.SSH_SECRET_PRIVATE_KEY_DEV}}" > ~/.ssh/dev.pem
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
           ssh -i ~/.ssh/dev.pem ubuntu@54.242.252.5
           pwd
           ls -al
