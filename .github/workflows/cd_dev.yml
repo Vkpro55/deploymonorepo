@@ -1,0 +1,12 @@
+name: Deploying To Dev Server
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploymonorepo:
+    name: Deploy every application to the dev server
+
+    setps:
+      - name: SSH into the dev server
+        run: echo "Hi dev server"
