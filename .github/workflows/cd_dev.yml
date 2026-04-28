@@ -12,10 +12,5 @@ jobs:
       - name: SSH into the dev server
         run: |
           cd ~
-          mkdir .ssh
-          cd .ssh
-          touch dev.pem
-          cd..
-          echo ${{secrets.SSH_SECRET_PRIVATE_KEY_DEV}} > ~/.ssh/dev.pem
-          ssh -i ~/.ssh/dev.pem ubuntu@54.242.252.5
-          cd deploymonorepo
+          pwd
+          ls
