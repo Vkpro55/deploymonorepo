@@ -18,6 +18,11 @@ jobs:
           chmod 400 ~/.ssh/dev.pem
           ssh -i ~/.ssh/dev.pem ubuntu@54.242.252.5 << 'EOF'
           cd deploymonorepo
-          ls
+          git pull origin main
+          pnpm install
+          pnpm run build
+          pm2 restart web
+          pm2 restart http
+          pm2 restart ws
           EOF
 

@@ -7,7 +7,7 @@ export default async function Home() {
 
   return (
     <div>
-      Nextjs Page
+      Nextjs Page Updated for deployement
       {user?.email}
       {user?.name}
     </div>
