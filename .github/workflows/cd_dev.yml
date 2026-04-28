@@ -8,6 +8,6 @@ jobs:
     name: Deploy every application to the dev server
     runs-on: ubuntu-latest
 
-    setps:
+    steps:
       - name: SSH into the dev server
         run: echo "Hi dev server"
