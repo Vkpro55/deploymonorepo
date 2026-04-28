@@ -19,6 +19,7 @@ jobs:
           ssh -i ~/.ssh/dev.pem ubuntu@54.242.252.5 << 'EOF'
           cd deploymonorepo
           git pull origin main
+          npm install -g pnpm
           pnpm install
           pnpm run build
           pm2 restart web
