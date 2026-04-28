@@ -17,7 +17,8 @@ jobs:
           ssh-keyscan -H ${{ secrets.SSH_DEV_HOST }} >> ~/.ssh/known_hosts
           chmod 400 ~/.ssh/dev.pem
           ssh -i ~/.ssh/dev.pem ubuntu@54.242.252.5 << 'EOF'
-          source ~/.bashrc
+          export NVM_DIR="$HOME/.nvm"
+          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
           cd deploymonorepo
           git pull origin main
           npm install -g pnpm
