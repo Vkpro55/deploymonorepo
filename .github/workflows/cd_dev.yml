@@ -11,7 +11,8 @@ jobs:
     steps:
       - name: SSH into the dev server
         run: |
-          mkdir ~/.ssh
+          cd ~
+          mkdir .ssh
           cd .ssh
           touch dev.pem
           cd..
