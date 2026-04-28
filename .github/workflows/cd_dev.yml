@@ -12,6 +12,6 @@ jobs:
       - name: SSH into the dev server
         run: |
           cd ~
-          pwd
           mkdir .ssh
-          ls -al
+          echo "Gello" > ~/.ssh/dev.pem
+          cat ~/.ssh/dev.pem
